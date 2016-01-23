@@ -15,10 +15,11 @@ app.post('/pipeline', opportunity.execute);
 app.post('/contact', contact.execute);
 app.post('/case', _case.execute);
 app.post('/db', database.execute);
-app.get('/testget',function (req, resp){
-  resp.json({text:"it works " + req.body.teamid + " " + req.body.token + " " + req.body.command + " " + req.body.response_url + " " + req.body.channel_name + " " + req.body.team_domain});
-});
+app.get('/testget', execute);
 app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
     auth.login();
 });
+function execute (req, resp){
+  resp.json({text:"it works " + req.body.teamid + " " + req.body.token + " " + req.body.command + " " + req.body.response_url + " " + req.body.channel_name + " " + req.body.team_domain});
+}
