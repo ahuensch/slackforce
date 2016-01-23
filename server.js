@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 
+var auth = require('./modules/auth');
 var requireDir = require('require-dir');
 var commands = requireDir('./commands');
 
