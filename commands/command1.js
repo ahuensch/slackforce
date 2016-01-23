@@ -1,4 +1,4 @@
-var org = require('./auth').org;
+var org = require('../modules/auth').org;
 
 module.exports = function(req, resp){
 
