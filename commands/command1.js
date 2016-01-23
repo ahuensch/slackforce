@@ -2,7 +2,7 @@
 
 module.exports = function(req, resp){
 
-  result.send("It Works");
+  resp.send("It Works");
 
 //   var q = "SELECT Id, Org_PIN_DB__c, SQL_Server_Name__c, SQL_Database_Name__c ,Name, Account_Name__c FROM Application_Database__c "
 //   +"WHERE Name LIKE '%"+req.body.text+"%' OR Account_Name__c LIKE '%"+req.body.text+"%' OR SQL_Database_Name__c LIKE '%"+req.body.text+"%' LIMIT 5";
