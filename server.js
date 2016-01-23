@@ -1,5 +1,5 @@
-//var requireDir = requrie('require-dir');
-//var commands = requireDir('./commands');
+var requireDir = require('require-dir');
+var commands = requireDir('./commands');
 
 var express = require('express'),
     bodyParser = require('body-parser'),
