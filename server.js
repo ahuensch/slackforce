@@ -26,6 +26,7 @@ function execute (req, resp){
     resp.send(401, "Unauthorized Access");
     return;
   }
-  commands[req.body.command.replace('/','')].module(req,resp);
+resp.send(commands)
+  //commands[req.body.command.replace('/','')].module(req,resp);
   //resp.json({text:"it works " + req.body.team_id + " " + req.body.token + " " + req.body.command + " " + req.body.response_url + " " + req.body.channel_name + " " + req.body.team_domain});
 }
