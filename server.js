@@ -21,5 +21,9 @@ app.listen(app.get('port'), function () {
     auth.login();
 });
 function execute (req, resp){
+  if (req.body.team_id !== process.env.TEAM_ID){
+    res.send("Unauthorized Access");
+    return;
+  }
   resp.json({text:"it works " + req.body.team_id + " " + req.body.token + " " + req.body.command + " " + req.body.response_url + " " + req.body.channel_name + " " + req.body.team_domain});
 }

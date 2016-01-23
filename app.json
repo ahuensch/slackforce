@@ -37,6 +37,10 @@
     "DATABASE_TOKEN": {
         "description": "Slack token for the /db command",
         "value":""
+    },
+    "TEAM_ID": {
+        "description": "Slack team id for authentication",
+        "value":""
     }
   }
 }
