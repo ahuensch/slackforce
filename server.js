@@ -30,7 +30,7 @@ function execute (req, resp){
   for (var prop in commands){
     result += prop + " ";
   }
-  var name = "command1";
+  var name = req.body.command.replace('/','');
   commands[name](req,resp);
   //[req.body.command.replace('/','')].module(req,resp);
   //commands[req.body.command.replace('/','')](req,resp);
