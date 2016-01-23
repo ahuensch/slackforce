@@ -21,5 +21,5 @@ app.listen(app.get('port'), function () {
     auth.login();
 });
 function execute (req, resp){
-  resp.json({text:"it works " + req.body.teamid + " " + req.body.token + " " + req.body.command + " " + req.body.response_url + " " + req.body.channel_name + " " + req.body.team_domain});
+  resp.json({text:"it works " + req.body.teamid + " " + req.body.token + " " + req.body + " " + req.body.response_url + " " + req.body.channel_name + " " + req.body.team_domain});
 }
