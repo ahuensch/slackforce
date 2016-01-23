@@ -15,7 +15,7 @@ app.post('/pipeline', opportunity.execute);
 app.post('/contact', contact.execute);
 app.post('/case', _case.execute);
 app.post('/db', database.execute);
-app.get('/testget', execute);
+app.post('/testget', execute);
 app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
     auth.login();
