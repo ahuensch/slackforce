@@ -29,6 +29,10 @@
     "CASE_TOKEN": {
         "description": "Slack token for the case slash command",
         "value":""
+    },
+    "ENVIRONMENT": {
+        "description": "Salesforce environement",
+        "value":"sandbox"
     }
   }
 }
