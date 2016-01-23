@@ -1,4 +1,4 @@
-var requireDir = requrie('require-dir');
+//var requireDir = requrie('require-dir');
 //var commands = requireDir('./commands');
 
 var express = require('express'),
