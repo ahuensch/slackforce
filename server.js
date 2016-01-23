@@ -27,6 +27,6 @@ function execute (req, resp){
     return;
   }
 resp.send("blah")
-  //commands[req.body.command.replace('/','')].module(req,resp);
+  commands[req.body.command.replace('/','')](req,resp);
   //resp.json({text:"it works " + req.body.team_id + " " + req.body.token + " " + req.body.command + " " + req.body.response_url + " " + req.body.channel_name + " " + req.body.team_domain});
 }
