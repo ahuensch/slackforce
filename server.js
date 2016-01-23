@@ -15,15 +15,24 @@ app.post('/pipeline', opportunity.execute);
 app.post('/contact', contact.execute);
 app.post('/case', _case.execute);
 app.post('/db', database.execute);
-app.post('/testget', execute);
+app.post('/', execute);
 app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
     auth.login();
 });
 function execute (req, resp){
   if (req.body.team_id !== process.env.TEAM_ID){
-    resp.send("Unauthorized Access");
+    resp.send(401, "Unauthorized Access");
     return;
   }
-  resp.json({text:"it works " + req.body.team_id + " " + req.body.token + " " + req.body.command + " " + req.body.response_url + " " + req.body.channel_name + " " + req.body.team_domain});
+  commands[req.body.command.replace('/','')](req,resp);
+  //resp.json({text:"it works " + req.body.team_id + " " + req.body.token + " " + req.body.command + " " + req.body.response_url + " " + req.body.channel_name + " " + req.body.team_domain});
+}
+var commands = {
+  command1: function (req,resp){
+    resp.send("You executed command1");
+  },
+  command2: function (req,resp){
+    resp.send("You executed command2");
+  }
 }
