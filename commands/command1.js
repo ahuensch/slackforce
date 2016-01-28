@@ -4,13 +4,15 @@ module.exports = {
   },
 
   query: function(searchTerm) {
-    return
+    var result =
       "SELECT Id, Name, Phone, MobilePhone, Email"
       + " FROM Contact "
       + " WHERE Name LIKE '%" + searchTerm + "%'"
       + " LIMIT 5";
+    console.log(result);  
+    return result;
   },
-  
+
   attachments: function(contacts) {
     var attachments = [];
     contacts.forEach(function(contact) {
