@@ -6,7 +6,7 @@ module.exports = {
 
   query: function(searchTerm) {
     var result =
-      "SELECT Id, CreatedDate, Days_Open__c, Subject , CaseNumber,	V1_Defect__c, Account_Name__c"
+      "SELECT Id, CreatedDate, Days_Open__c, Subject , CaseNumber,	V1_Defect__c"
       + " FROM Case "
       + " WHERE V1_Defect__c LIKE '%" + searchTerm + "%'"
       + " LIMIT 10";
@@ -19,7 +19,6 @@ module.exports = {
         var fields = [];
         fields.push({title: "Case #", value: defect.get("CaseNumber"), short:true});
         fields.push({title: "Subject", value: defect.get("Subject"), short:true});
-        fields.push({title: "Account", value: defect.get("Account_Name__c"), short:true});
         fields.push({title: "Age", value: defect.get("Days_Open__c"), short:true});
         fields.push({title: "Date Opened", value: defect.get("CreatedDate"), short:true});
         attachments.push({color: "#009cdb", fields: fields});
