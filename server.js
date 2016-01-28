@@ -23,7 +23,7 @@ app.post('/', function (req,resp){
   // Execute specified command
   var name = req.body.command.replace('/','');
   var command = commands[name]
-  run(req, resp, command);
+  run.execute(req, resp, command);
 });
 
 
