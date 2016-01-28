@@ -8,8 +8,7 @@ module.exports = {
       "SELECT Id, Name, Phone, MobilePhone, Email"
       + " FROM Contact "
       + " WHERE Name LIKE '%" + searchTerm + "%'"
-      + " LIMIT 5";
-    console.log(result);  
+      + " LIMIT 5"; 
     return result;
   },
 

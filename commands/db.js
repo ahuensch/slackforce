@@ -1,4 +1,3 @@
-
 module.exports = {
   title: function(searchTerm) {
     return "Application Databases matching: " + searchTerm;
@@ -12,7 +11,6 @@ module.exports = {
       + " OR Account_Name__c LIKE '%" + searchTerm + "%'"
       + " OR SQL_Database_Name__c LIKE '%" + searchTerm + "%'"
       + " LIMIT 5";
-    console.log(result);
     return result;
   },
 

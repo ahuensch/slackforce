@@ -3,8 +3,8 @@ var bodyParser = require('body-parser');
 var app = express();
 
 // Setup App
-var auth = require('./commands/auth');
-var run = require('./commands/command-runner');
+var auth = require('./auth');
+var command = require('./command');
 
 app.set('port', process.env.PORT || 5000);
 app.use(bodyParser.urlencoded({extended: true}));
@@ -22,8 +22,7 @@ app.post('/', function (req,resp){
 
   // Execute specified command
   var name = req.body.command.replace('/','');
-  var command = commands[name]
-  run.execute(req, resp, command);
+  command.execute(req, resp, commands[name]);
 });
 
 

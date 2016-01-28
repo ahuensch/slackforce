@@ -18,29 +18,13 @@
         "description": "Salesforce password for your integration user",
         "value":""
     },
-    "OPPORTUNITY_TOKEN": {
-        "description": "Slack token for the pipeline slash command",
-        "value":""
-    },
-    "CONTACT_TOKEN": {
-        "description": "Slack token for the contact slash command",
-        "value":""
-    },
-    "CASE_TOKEN": {
-        "description": "Slack token for the case slash command",
+    "TEAM_ID": {
+        "description": "Slack team id for authentication",
         "value":""
     },
     "ENVIRONMENT": {
         "description": "Salesforce environement",
         "value":"sandbox"
-    },
-    "DATABASE_TOKEN": {
-        "description": "Slack token for the /db command",
-        "value":""
-    },
-    "TEAM_ID": {
-        "description": "Slack team id for authentication",
-        "value":""
     }
   }
 }
