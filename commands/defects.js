@@ -13,15 +13,15 @@ module.exports = {
     return result;
   },
 
-  attachments: function(cases) {
+  attachments: function(defects) {
     var attachments = [];
-    cases.forEach(function(case) {
+    defects.forEach(function(defect) {
         var fields = [];
-        fields.push({title: "Case #", value: case.get("CaseNumber"), short:true});
-        fields.push({title: "Subject", value: case.get("Subject"), short:true});
-        fields.push({title: "Account", value: case.get("Account_Name__c"), short:true});
-        fields.push({title: "Age", value: case.get("Days_Open__c"), short:true});
-        fields.push({title: "Date Opened", value: case.get("CreatedDate"), short:true});
+        fields.push({title: "Case #", value: defect.get("CaseNumber"), short:true});
+        fields.push({title: "Subject", value: defect.get("Subject"), short:true});
+        fields.push({title: "Account", value: defect.get("Account_Name__c"), short:true});
+        fields.push({title: "Age", value: defect.get("Days_Open__c"), short:true});
+        fields.push({title: "Date Opened", value: defect.get("CreatedDate"), short:true});
         attachments.push({color: "#009cdb", fields: fields});
     });
     return attachments;
