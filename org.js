@@ -11,4 +11,4 @@ org = nforce.createConnection({
   mode: 'single'
 });
 
-exports = org;
+module.exports = org;
