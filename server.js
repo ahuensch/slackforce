@@ -16,7 +16,7 @@ var commands = requireDir('./commands');
 
 app.post('/', function (req,resp){
   if (req.body.team_id !== process.env.TEAM_ID){
-    resp.send(401, req.body.team_id);
+    resp.send(401, "Unauthorized Access");
     return;
   }
 

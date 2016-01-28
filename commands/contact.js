@@ -1,4 +1,5 @@
 module.exports = {
+  inChannel: true,
   title: function(searchTerm) {
     return "Contacts matching: " + searchTerm;
   },
@@ -8,7 +9,7 @@ module.exports = {
       "SELECT Id, Name, Phone, MobilePhone, Email"
       + " FROM Contact "
       + " WHERE Name LIKE '%" + searchTerm + "%'"
-      + " LIMIT 5"; 
+      + " LIMIT 5";
     return result;
   },
 
