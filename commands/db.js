@@ -1,4 +1,5 @@
 module.exports = {
+    inChannel: true,
   title: function(searchTerm) {
     return "Application Databases matching: " + searchTerm;
   },
