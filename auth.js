@@ -4,7 +4,7 @@ var PASSWORD = process.env.PASSWORD;
 
 var org = require('./org');
 
-function login() {
+module.exports = function() {
     org.authenticate({ username: USER_NAME, password: PASSWORD}, function(err, resp) {
         if (err) {
             console.error("Authentication error");
@@ -14,5 +14,3 @@ function login() {
         }
     });
 }
-
-exports.login = login;
