@@ -9,6 +9,7 @@ module.exports = {
       + " FROM Application_Database__c "
       + " WHERE Name LIKE '%" + searchTerm + "%'"
       + " OR Account_Name__c LIKE '%" + searchTerm + "%'"
+      + " OR Org_PIN_DB__c LIKE '%" + searchTerm + "%'"
       + " OR SQL_Database_Name__c LIKE '%" + searchTerm + "%'"
       + " LIMIT 5";
     return result;
